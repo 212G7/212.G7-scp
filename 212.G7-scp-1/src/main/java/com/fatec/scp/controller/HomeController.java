@@ -15,25 +15,25 @@ public class HomeController {
 	@GetMapping("/clientes")
 	public ModelAndView cadastrarCliente() {
 
-		return new ModelAndView("cadastrarCliente");
+		return new ModelAndView("cadastrarClientes");
 	}
 
-	@GetMapping("/fornecedores")
+	@GetMapping("/advogados")
 	public ModelAndView cadastrarFornecedor() {
 
-		return new ModelAndView("cadastrarFornecedor");
+		return new ModelAndView("cadastrarAdvogados");
 	}
 
-	@GetMapping("/Page02")
+	@GetMapping("/Processos")
 	public ModelAndView cadastrarPage02() {
 
-		return new ModelAndView("cadastrarPage02");
+		return new ModelAndView("cadastrarProcessos");
 	}
 
-	@GetMapping("/Page03")
+	@GetMapping("/Audiências")
 	public ModelAndView cadastrarPage03() {
 
-		return new ModelAndView("cadastrarPage03");
+		return new ModelAndView("cadastrarAudiências");
 	}
 
 	@GetMapping("/logout")
@@ -41,5 +41,9 @@ public class HomeController {
 
 		return new ModelAndView("Logout");
 	}
-	
+
+	@GetMapping("/login")
+	public ModelAndView autenticacao() {
+		return new ModelAndView("paginaLogin");
+	}
 }
