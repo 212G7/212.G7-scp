@@ -13,7 +13,7 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 @Entity
-public class Cliente {
+public class Advogado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -32,10 +32,10 @@ public class Cliente {
 	private String dataCadastro;
 	private String dataUltimaTransacao;
 
-	public Cliente() {
+	public Advogado() {
 	}
 
-	public Cliente(String cpf, String nome, String email, String cep, Endereco endereco) {
+	public Advogado(String cpf, String nome, String email, String cep, Endereco endereco) {
 		super();
 		this.cpf = cpf;
 		this.nome = nome;

@@ -13,27 +13,33 @@ public class HomeController {
 	}
 
 	@GetMapping("/clientes")
-	public ModelAndView cadastrarCliente() {
+	public ModelAndView cadastrarClientes() {
 
 		return new ModelAndView("cadastrarClientes");
 	}
 
 	@GetMapping("/advogados")
-	public ModelAndView cadastrarFornecedor() {
+	public ModelAndView cadastrarAdvogados() {
 
 		return new ModelAndView("cadastrarAdvogados");
 	}
 
-	@GetMapping("/Processos")
-	public ModelAndView cadastrarPage02() {
+	@GetMapping("/processos")
+	public ModelAndView cadastrarProcessos() {
 
 		return new ModelAndView("cadastrarProcessos");
 	}
 
-	@GetMapping("/Audiências")
-	public ModelAndView cadastrarPage03() {
+	@GetMapping("/audiencias")
+	public ModelAndView cadastrarAudiencias() {
 
-		return new ModelAndView("cadastrarAudiências");
+		return new ModelAndView("cadastrarAudiencias");
+	}
+	
+	@GetMapping("/boletos")
+	public ModelAndView cadastrarBoletos() {
+
+		return new ModelAndView("cadastrarBoletos");
 	}
 
 	@GetMapping("/logout")
@@ -43,7 +49,18 @@ public class HomeController {
 	}
 
 	@GetMapping("/login")
-	public ModelAndView autenticacao() {
+	public ModelAndView paginaLogin() {
 		return new ModelAndView("paginaLogin");
 	}
+	
+	@GetMapping("/consultar")
+	public ModelAndView consultarCliente() {
+		return new ModelAndView("consultarCliente");
+	}
+	
+	@GetMapping("/atualizar")
+	public ModelAndView consultarAtualizar() {
+		return new ModelAndView("consultarAtualizar");
+	}
+	
 }

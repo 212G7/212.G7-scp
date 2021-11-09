@@ -30,12 +30,12 @@ public class ClienteController {
 
 	@GetMapping("/cliente")
 	public ModelAndView retornaFormDeCadastroDe(Cliente cliente) {
-		ModelAndView mv = new ModelAndView("cadastrarCliente");
+		ModelAndView mv = new ModelAndView("cadastrarClientes");
 		mv.addObject("cliente", cliente);
 		return mv;
 	}
 
-	@GetMapping("/clientes/{cpf}") // diz ao metodo que ira responder a uma requisicao do tipo get
+	@GetMapping("/clientes/{cpf}") // diz ao metodo que irá responder a uma requisicao do tipo get
 	public ModelAndView retornaFormParaEditarCliente(@PathVariable("cpf") String cpf) {
 		ModelAndView modelAndView = new ModelAndView("atualizarCliente");
 		modelAndView.addObject("cliente", servico.findByCpf(cpf)); // o repositorio e injetado no controller
@@ -55,7 +55,7 @@ public class ClienteController {
 	public ModelAndView save(@Valid Cliente cliente, BindingResult result) {
 		ModelAndView modelAndView = new ModelAndView("consultarCliente");
 		if (result.hasErrors()) {
-			modelAndView.setViewName("cadastrarCliente");
+			modelAndView.setViewName("cadastrarClientes");
 		} else {
 			modelAndView = servico.saveOrUpdate(cliente);
 		}
